@@ -1,0 +1,21 @@
+kubeProxyReplacement: true
+k8sServiceHost: "192.168.1.100"
+k8sServicePort: 6443
+
+operator:
+  replicas: 1
+l2announcements:
+  enabled: true
+
+bgpControlPlane:
+  enabled: true
+
+k8sClientRateLimit:
+  qps: 80
+  burst: 150
+
+externalIPs:
+  enabled: true
+  
+pmtuDiscovery:
+  enabled: true
