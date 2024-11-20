@@ -49,7 +49,7 @@ module "helm_packages" {
       chart       = "cilium"
       repository  = "https://helm.cilium.io/"
       namespace   = "kube-system"
-      version     = "1.16.3"
+      version     = "1.17.0-pre.2"
       values_file = "files/cilium.values.yaml"
     },
     {
@@ -59,6 +59,14 @@ module "helm_packages" {
       namespace   = "harbor-system"
       version     = "1.15.1"
       values_file = "files/harbor.values.yaml"
+    },
+    {
+      name        = "prometheus"
+      chart       = "prometheus"
+      repository  = "https://prometheus-community.github.io/helm-charts"
+      namespace   = "monitoring"
+      version     = "25.30.1"
+      values_file = "files/prometheus.values.yaml"
     }
   ]
 }
