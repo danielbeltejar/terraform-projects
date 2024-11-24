@@ -11,7 +11,6 @@ provider "helm" {
 
 provider "kubectl" {
   load_config_file = true
-  host             = "https://192.168.1.100:6443"
   config_path      = pathexpand("~/.kube/config")
 }
 
@@ -29,9 +28,9 @@ terraform {
   }
 
   backend "local" {
-    workspace_dir = "./vars"
+    workspace_dir = "./states"
 
-    path = "vars/terraform.tfstate"
+    path = "states/terraform.tfstate"
 
   }
 }
