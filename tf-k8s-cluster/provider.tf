@@ -11,7 +11,7 @@ provider "helm" {
 
 provider "kubectl" {
   load_config_file = true
-  config_path      = pathexpand("~/.kube/config")
+  config_path      = "~/.kube/config"
 }
 
 terraform {
